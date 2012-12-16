@@ -1,4 +1,14 @@
-vim-setup
+Title: Vim Setting
+Description: Personal vim setting
 =========
 
-My Personal Vim Setup
+Personal Vim Set Up
+=============================
+
+
+Plug-Ins used
+------------
+
+1. NERDTree
+2. Tagbar
+3. Fuzzyfinder
