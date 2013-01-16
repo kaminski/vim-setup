@@ -10,10 +10,9 @@ set number
 let &t_Co=256
 
 " use symfony color scheme
-colors symfony
+colorscheme solarized
 let g:solarized_termcolors=256
 set background=light
-colorscheme solarized
 
 " I like 4 spaces for indenting
 set shiftwidth=4
@@ -74,9 +73,12 @@ set statusline+=%h%m%r%w                     " flags
 set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
 set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
 set statusline+=%{&fileformat}]              " file format
+set statusline+=%f\ \ \
+set statusline+=%{fugitive#statusline()}
 set statusline+=%=                           " right align
 set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
 set statusline+=%b,0x%-8B\                   " current char
+set statusline+=%L\ --\                        " line/lines
 set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 
 "nerd tree short cut
@@ -171,3 +173,7 @@ filetype plugin indent on
 map ff <esc>:FufFile<cr>
 map fd <esc>:FufDir<cr>
 map fb <esc>:FufBuffer<cr>
+
+" leader commands
+map <Leader>s <esc>:w<cr>
+map <Leader>x <esc>:x<cr>
