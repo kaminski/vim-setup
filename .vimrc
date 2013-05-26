@@ -10,7 +10,7 @@ set number
 let &t_Co=256
 
 " use symfony color scheme
-colorscheme solarized
+colorscheme mustang 
 let g:solarized_termcolors=256
 set background=light
 
@@ -19,18 +19,13 @@ set shiftwidth=4
 
 "ruler
 set ruler
+
 " Use Vim settings, rather then Vi settings (much better!).
 set nocompatible
 
 " hide scrollbars in gvim
 set guioptions+=LlRrb
 set guioptions-=LlRrb
-
-" I like 4 spaces for indenting
-set shiftwidth=4
-
-"ruler
-set ruler
 
 " I like 4 stops
 set tabstop=4
@@ -51,7 +46,7 @@ set pastetoggle=<F3>
 " Always display a status line at the bottom of the window
 set laststatus=2
 
-set cmdheight=2 "The commandbar height
+set cmdheight=1 "The commandbar height
 
 set ignorecase "Ignore case when searching
 
@@ -114,9 +109,6 @@ set fileencodings=utf-8
  \ endif
 
 
-" I like 4 stops
-set tabstop=4
-
 " Spaces instead of tabs
 set expandtab
 
@@ -133,10 +125,6 @@ set laststatus=2
 " Set mimimum window height to 0, so only filename will be displayed
 set wmh=0
 
-set cmdheight=2 "The commandbar height
-
-set ignorecase "Ignore case when searching
-
 set incsearch "Make search act like search in modern browsers
 
 set showmatch "Show matching bracets when text indicator is over themi
@@ -151,6 +139,17 @@ set title
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
+
+" set the names of flags
+let tlist_php_settings = 'php;c:class;f:function;d:constant'
+" close all folds except for current file
+let Tlist_File_Fold_Auto_Close = 1
+" make tlist pane active when opened
+let Tlist_GainFocus_On_ToggleOpen = 1
+" width of window
+let Tlist_WinWidth = 40
+" close tlist when a selection is made
+let Tlist_Close_On_Select = 0
 
 "nerd tree short cut
 
@@ -170,6 +169,7 @@ filetype plugin indent on
  \ endif |
  \ endif
 
+" Fuzzy Finder Shortcuts
 map ff <esc>:FufFile<cr>
 map fd <esc>:FufDir<cr>
 map fb <esc>:FufBuffer<cr>
@@ -177,3 +177,12 @@ map fb <esc>:FufBuffer<cr>
 " leader commands
 map <Leader>s <esc>:w<cr>
 map <Leader>x <esc>:x<cr>
+
+" MRU options
+ let MRU_Auto_Close = 0 
+
+" show visual indicator for line length
+if exists('+colorcolumn')
+  set colorcolumn=114
+  endif
+
