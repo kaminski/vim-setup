@@ -186,3 +186,4 @@ if exists('+colorcolumn')
   set colorcolumn=114
   endif
 
+inoremap jj <Esc>
