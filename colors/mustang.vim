@@ -53,6 +53,7 @@ hi Todo         guifg=#000000 guibg=#e6ea50 gui=italic
 
 " Other
 highlight Directory ctermfg=103 guifg=#5fafd7 
+hi CursorLine   cterm=NONE ctermbg=236
 
 " Code-specific colors
 hi pythonOperator guifg=#7e8aa2 gui=none ctermfg=103
