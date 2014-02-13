@@ -11,8 +11,8 @@ let &t_Co=256
 
 " use symfony color scheme
 colorscheme mustang 
+
 let g:solarized_termcolors=256
-set background=light
 
 " I like 4 spaces for indenting
 set shiftwidth=4
